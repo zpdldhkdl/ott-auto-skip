@@ -22,9 +22,9 @@ Whether you're binge-watching a K-drama marathon, catching up on the latest Netf
 
 ## 🎯 Supported Platforms
 
-| Platform | Intro Skip | Recap Skip | Outro Skip |
-|----------|:----------:|:----------:|:----------:|
-| Netflix | ✅ | ✅ | ❌ |
+| Platform | Intro Skip | Recap Skip | Next Episode |
+|----------|:----------:|:----------:|:------------:|
+| Netflix | ✅ | ✅ | ✅ |
 | Disney+ | ❌ | ❌ | ❌ |
 | Wavve | ❌ | ❌ | ❌ |
 | Tving | ❌ | ❌ | ❌ |
@@ -138,25 +138,6 @@ ott-auto-skip/
   - Verify the loaded directory is `dist/` or `release/unpacked/`, not repository root.
 - **Content script does not appear on a page**
   - Reload the extension in `chrome://extensions/` and refresh the target tab.
-
-## 🤝 Contributing
-
-Contributions are welcome! Whether it's a bug fix, new platform support, or a feature idea, feel free to get involved.
-
-1. **Fork** this repository.
-2. **Create** a feature branch: `git checkout -b feature/add-wavve-support`
-3. **Commit** your changes: `git commit -m "feat: add Wavve auto-skip support"`
-4. **Push** to your branch: `git push origin feature/add-wavve-support`
-5. **Open** a Pull Request.
-
-### Development Guidelines
-- Follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
-- Test your changes on the target platform before submitting a PR.
-- Keep content scripts lightweight to avoid impacting page performance.
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
