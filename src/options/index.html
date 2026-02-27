@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTT Auto Skip - Options</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <main class="options-root">
+        <header class="header">
+            <div class="logo-container">
+                <img src="../../images/icons/icon-128.png" alt="Logo" class="logo"
+                    onerror="this.src='/icons/icon-128.png'" />
+            </div>
+            <div>
+                <h1 data-i18n="extName">OTT Auto Skip</h1>
+                <p class="subtitle" data-i18n="extDescription">Auto skip intros and ads.</p>
+            </div>
+        </header>
+
+        <section class="settings-card">
+            <h2 class="section-title">Settings</h2>
+            <p id="options-status" class="status-text"></p>
+
+            <div class="toggle-list">
+                <div class="toggle-master-card">
+                    <label class="toggle-item master" for="toggle-master">
+                        <span data-i18n="toggleMaster">Enable Auto Skip</span>
+                        <div class="switch">
+                            <input id="toggle-master" type="checkbox" />
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="divider"></div>
+
+                <label class="toggle-item" for="toggle-intro">
+                    <span data-i18n="toggleIntro">Skip Intro</span>
+                    <div class="switch small">
+                        <input id="toggle-intro" type="checkbox" />
+                        <span class="slider"></span>
+                    </div>
+                </label>
+
+                <label class="toggle-item" for="toggle-recap">
+                    <span data-i18n="toggleRecap">Skip Recap</span>
+                    <div class="switch small">
+                        <input id="toggle-recap" type="checkbox" />
+                        <span class="slider"></span>
+                    </div>
+                </label>
+
+                <label class="toggle-item" for="toggle-next-episode">
+                    <span data-i18n="toggleNextEpisode">Auto Click Next Episode</span>
+                    <div class="switch small">
+                        <input id="toggle-next-episode" type="checkbox" />
+                        <span class="slider"></span>
+                    </div>
+                </label>
+            </div>
+        </section>
+
+        <footer class="options-footer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvRBjD87VwPyG0__RfhlHmJrRpfbvQMH8Z3DX5Z_W5JzSxFw/viewform"
+                target="_blank" class="contact-link" data-i18n="contactUs">Contact Us</a>
+        </footer>
+    </main>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

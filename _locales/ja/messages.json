@@ -28,5 +28,11 @@
   },
   "statusError": {
     "message": "設定の読み込みに失敗しました"
+  },
+  "openOptions": {
+    "message": "設定"
+  },
+  "contactUs": {
+    "message": "お問い合わせ"
   }
 }

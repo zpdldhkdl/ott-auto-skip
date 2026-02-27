@@ -8,30 +8,56 @@
   </head>
   <body>
     <main class="popup-root">
-      <h1 data-i18n="popupTitle">OTT Auto Skip</h1>
+      <header class="header">
+        <div class="logo-container">
+          <img src="../../images/icons/icon-48.png" alt="Logo" class="logo" onerror="this.src='/icons/icon-48.png'" />
+        </div>
+        <h1 data-i18n="popupTitle">OTT Auto Skip</h1>
+      </header>
+
       <p id="popup-status" class="status-text"></p>
 
       <section class="toggle-list" aria-label="skip settings">
-        <label class="toggle-item" for="toggle-master">
-          <span data-i18n="toggleMaster">Enable Auto Skip</span>
-          <input id="toggle-master" type="checkbox" />
-        </label>
+        <div class="toggle-master-card">
+          <label class="toggle-item master" for="toggle-master">
+            <span data-i18n="toggleMaster">Enable Auto Skip</span>
+            <div class="switch">
+              <input id="toggle-master" type="checkbox" />
+              <span class="slider"></span>
+            </div>
+          </label>
+        </div>
+
+        <div class="divider"></div>
 
         <label class="toggle-item" for="toggle-intro">
           <span data-i18n="toggleIntro">Skip Intro</span>
-          <input id="toggle-intro" type="checkbox" />
+          <div class="switch small">
+            <input id="toggle-intro" type="checkbox" />
+            <span class="slider"></span>
+          </div>
         </label>
 
         <label class="toggle-item" for="toggle-recap">
           <span data-i18n="toggleRecap">Skip Recap</span>
-          <input id="toggle-recap" type="checkbox" />
+          <div class="switch small">
+            <input id="toggle-recap" type="checkbox" />
+            <span class="slider"></span>
+          </div>
         </label>
 
         <label class="toggle-item" for="toggle-next-episode">
           <span data-i18n="toggleNextEpisode">Auto Click Next Episode</span>
-          <input id="toggle-next-episode" type="checkbox" />
+          <div class="switch small">
+            <input id="toggle-next-episode" type="checkbox" />
+            <span class="slider"></span>
+          </div>
         </label>
       </section>
+
+      <footer class="footer">
+        <a href="#" id="options-link" class="options-link" data-i18n="openOptions">Options</a>
+      </footer>
     </main>
     <script type="module" src="./main.js"></script>
   </body>

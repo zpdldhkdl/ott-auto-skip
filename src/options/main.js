@@ -7,7 +7,8 @@ import {
 } from '../shared/settings.js';
 
 const FALLBACK_MESSAGES = {
-  popupTitle: 'OTT Auto Skip',
+  extName: 'OTT Auto Skip',
+  extDescription: 'Auto skip intros, recaps, and go to next episodes automatically on OTT platforms.',
   toggleMaster: 'Enable Auto Skip',
   toggleIntro: 'Skip Intro',
   toggleRecap: 'Skip Recap',
@@ -15,10 +16,9 @@ const FALLBACK_MESSAGES = {
   statusEnabled: 'Auto skip is enabled.',
   statusDisabled: 'Auto skip is disabled.',
   statusError: 'Failed to load settings',
-  openOptions: 'Options',
 };
 
-const statusElement = document.querySelector('#popup-status');
+const statusElement = document.querySelector('#options-status');
 const masterToggle = document.querySelector('#toggle-master');
 const introToggle = document.querySelector('#toggle-intro');
 const recapToggle = document.querySelector('#toggle-recap');
@@ -42,7 +42,7 @@ function applyTranslations() {
     node.textContent = getMessage(key);
   });
 
-  document.title = getMessage('popupTitle');
+  document.title = getMessage('extName') + ' - Options';
 }
 
 function updateStatus() {
@@ -128,28 +128,16 @@ function bindEvents() {
       [SETTING_KEYS.NEXT_EPISODE]: nextEpisodeToggle.checked,
     });
   });
-
-  const optionsLink = document.querySelector('#options-link');
-  if (optionsLink) {
-    optionsLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (chrome.runtime.openOptionsPage) {
-        chrome.runtime.openOptionsPage();
-      } else {
-        window.open(chrome.runtime.getURL('src/options/index.html'));
-      }
-    });
-  }
 }
 
-async function initializePopup() {
+async function initializeOptions() {
   applyTranslations();
   currentSettings = await getSettings();
   syncToggleState();
   bindEvents();
 }
 
-initializePopup().catch((error) => {
+initializeOptions().catch((error) => {
   if (!(statusElement instanceof HTMLElement)) {
     return;
   }

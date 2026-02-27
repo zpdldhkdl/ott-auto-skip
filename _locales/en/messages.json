@@ -28,5 +28,11 @@
   },
   "statusError": {
     "message": "Failed to load settings"
+  },
+  "openOptions": {
+    "message": "Options"
+  },
+  "contactUs": {
+    "message": "Contact Us"
   }
 }

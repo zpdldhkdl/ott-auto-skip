@@ -28,5 +28,11 @@
   },
   "statusError": {
     "message": "설정 로드에 실패했습니다"
+  },
+  "openOptions": {
+    "message": "설정"
+  },
+  "contactUs": {
+    "message": "문의하기"
   }
 }

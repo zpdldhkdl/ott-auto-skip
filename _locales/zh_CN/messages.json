@@ -28,5 +28,11 @@
   },
   "statusError": {
     "message": "加载设置失败"
+  },
+  "openOptions": {
+    "message": "选项"
+  },
+  "contactUs": {
+    "message": "联系我们"
   }
 }
