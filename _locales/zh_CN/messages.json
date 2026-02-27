@@ -1,0 +1,32 @@
+{
+  "extName": {
+    "message": "OTT Auto Skip"
+  },
+  "extDescription": {
+    "message": "自动点击 OTT 的片头、剧情回顾和下一集按钮。"
+  },
+  "popupTitle": {
+    "message": "OTT Auto Skip"
+  },
+  "toggleMaster": {
+    "message": "启用自动跳过"
+  },
+  "toggleIntro": {
+    "message": "跳过片头"
+  },
+  "toggleRecap": {
+    "message": "跳过剧情回顾"
+  },
+  "toggleNextEpisode": {
+    "message": "自动点击下一集"
+  },
+  "statusEnabled": {
+    "message": "自动跳过已开启。"
+  },
+  "statusDisabled": {
+    "message": "自动跳过已关闭。"
+  },
+  "statusError": {
+    "message": "加载设置失败"
+  }
+}

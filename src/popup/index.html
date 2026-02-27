@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTT Auto Skip</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="popup-root">
+      <h1 data-i18n="popupTitle">OTT Auto Skip</h1>
+      <p id="popup-status" class="status-text"></p>
+
+      <section class="toggle-list" aria-label="skip settings">
+        <label class="toggle-item" for="toggle-master">
+          <span data-i18n="toggleMaster">Enable Auto Skip</span>
+          <input id="toggle-master" type="checkbox" />
+        </label>
+
+        <label class="toggle-item" for="toggle-intro">
+          <span data-i18n="toggleIntro">Skip Intro</span>
+          <input id="toggle-intro" type="checkbox" />
+        </label>
+
+        <label class="toggle-item" for="toggle-recap">
+          <span data-i18n="toggleRecap">Skip Recap</span>
+          <input id="toggle-recap" type="checkbox" />
+        </label>
+
+        <label class="toggle-item" for="toggle-next-episode">
+          <span data-i18n="toggleNextEpisode">Auto Click Next Episode</span>
+          <input id="toggle-next-episode" type="checkbox" />
+        </label>
+      </section>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

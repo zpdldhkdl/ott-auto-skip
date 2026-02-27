@@ -1,0 +1,32 @@
+{
+  "extName": {
+    "message": "OTT Auto Skip"
+  },
+  "extDescription": {
+    "message": "OTTのイントロ・あらすじ・次のエピソードボタンを自動でクリックします。"
+  },
+  "popupTitle": {
+    "message": "OTT Auto Skip"
+  },
+  "toggleMaster": {
+    "message": "自動スキップを有効化"
+  },
+  "toggleIntro": {
+    "message": "イントロをスキップ"
+  },
+  "toggleRecap": {
+    "message": "あらすじをスキップ"
+  },
+  "toggleNextEpisode": {
+    "message": "次のエピソードを自動クリック"
+  },
+  "statusEnabled": {
+    "message": "自動スキップは有効です。"
+  },
+  "statusDisabled": {
+    "message": "自動スキップは無効です。"
+  },
+  "statusError": {
+    "message": "設定の読み込みに失敗しました"
+  }
+}

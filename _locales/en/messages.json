@@ -1,0 +1,32 @@
+{
+  "extName": {
+    "message": "OTT Auto Skip"
+  },
+  "extDescription": {
+    "message": "Automatically clicks OTT intro, recap, and next-episode buttons."
+  },
+  "popupTitle": {
+    "message": "OTT Auto Skip"
+  },
+  "toggleMaster": {
+    "message": "Enable Auto Skip"
+  },
+  "toggleIntro": {
+    "message": "Skip Intro"
+  },
+  "toggleRecap": {
+    "message": "Skip Recap"
+  },
+  "toggleNextEpisode": {
+    "message": "Auto Click Next Episode"
+  },
+  "statusEnabled": {
+    "message": "Auto skip is enabled."
+  },
+  "statusDisabled": {
+    "message": "Auto skip is disabled."
+  },
+  "statusError": {
+    "message": "Failed to load settings"
+  }
+}
