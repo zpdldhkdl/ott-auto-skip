@@ -11,6 +11,9 @@
   "toggleMaster": {
     "message": "자동 스킵 전체 사용"
   },
+  "toggleNetflix": {
+    "message": "Netflix 자동 스킵 켜기"
+  },
   "toggleIntro": {
     "message": "오프닝 스킵"
   },

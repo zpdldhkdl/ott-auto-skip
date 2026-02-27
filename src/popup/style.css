@@ -124,6 +124,36 @@ h1 {
   width: calc(100% - 12px);
 }
 
+.group-section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.group-header {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.group-toggle {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.group-title {
+  color: var(--text-primary);
+}
+
+.sub-toggles {
+  padding: 12px 12px 12px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 /* Custom Switch Toggle */
 .switch {
   position: relative;

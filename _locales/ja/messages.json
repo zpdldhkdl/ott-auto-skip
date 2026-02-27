@@ -11,6 +11,9 @@
   "toggleMaster": {
     "message": "自動スキップを有効化"
   },
+  "toggleNetflix": {
+    "message": "Netflixの自動スキップを有効化"
+  },
   "toggleIntro": {
     "message": "イントロをスキップ"
   },

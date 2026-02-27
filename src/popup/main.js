@@ -9,6 +9,7 @@ import {
 const FALLBACK_MESSAGES = {
   popupTitle: 'OTT Auto Skip',
   toggleMaster: 'Enable Auto Skip',
+  toggleNetflix: 'Enable Netflix Auto Skip',
   toggleIntro: 'Skip Intro',
   toggleRecap: 'Skip Recap',
   toggleNextEpisode: 'Auto Click Next Episode',
@@ -23,6 +24,7 @@ const masterToggle = document.querySelector('#toggle-master');
 const introToggle = document.querySelector('#toggle-intro');
 const recapToggle = document.querySelector('#toggle-recap');
 const nextEpisodeToggle = document.querySelector('#toggle-next-episode');
+const netflixToggle = document.querySelector('#toggle-netflix');
 
 let currentSettings = { ...DEFAULT_SKIP_SETTINGS };
 
@@ -72,15 +74,23 @@ function syncToggleState() {
     return;
   }
 
+  if (!(netflixToggle instanceof HTMLInputElement)) {
+    return;
+  }
+
   masterToggle.checked = currentSettings[SETTING_KEYS.MASTER];
+  netflixToggle.checked = currentSettings[SETTING_KEYS.NETFLIX_ENABLED];
   introToggle.checked = currentSettings[SETTING_KEYS.INTRO];
   recapToggle.checked = currentSettings[SETTING_KEYS.RECAP];
   nextEpisodeToggle.checked = currentSettings[SETTING_KEYS.NEXT_EPISODE];
 
   const isMasterEnabled = currentSettings[SETTING_KEYS.MASTER];
-  introToggle.disabled = !isMasterEnabled;
-  recapToggle.disabled = !isMasterEnabled;
-  nextEpisodeToggle.disabled = !isMasterEnabled;
+  netflixToggle.disabled = !isMasterEnabled;
+  
+  const isNetflixEnabled = isMasterEnabled && currentSettings[SETTING_KEYS.NETFLIX_ENABLED];
+  introToggle.disabled = !isNetflixEnabled;
+  recapToggle.disabled = !isNetflixEnabled;
+  nextEpisodeToggle.disabled = !isNetflixEnabled;
 
   updateStatus();
 }
@@ -98,6 +108,7 @@ async function saveSettings(partialSettings) {
 function bindEvents() {
   if (
     !(masterToggle instanceof HTMLInputElement) ||
+    !(netflixToggle instanceof HTMLInputElement) ||
     !(introToggle instanceof HTMLInputElement) ||
     !(recapToggle instanceof HTMLInputElement) ||
     !(nextEpisodeToggle instanceof HTMLInputElement)
@@ -108,6 +119,12 @@ function bindEvents() {
   masterToggle.addEventListener('change', () => {
     void saveSettings({
       [SETTING_KEYS.MASTER]: masterToggle.checked,
+    });
+  });
+
+  netflixToggle.addEventListener('change', () => {
+    void saveSettings({
+      [SETTING_KEYS.NETFLIX_ENABLED]: netflixToggle.checked,
     });
   });
 

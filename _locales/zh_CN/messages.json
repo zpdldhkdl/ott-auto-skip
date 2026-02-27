@@ -11,6 +11,9 @@
   "toggleMaster": {
     "message": "启用自动跳过"
   },
+  "toggleNetflix": {
+    "message": "启用 Netflix 自动跳过"
+  },
   "toggleIntro": {
     "message": "跳过片头"
   },

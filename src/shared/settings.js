@@ -3,6 +3,7 @@ export const SETTING_KEYS = {
   INTRO: 'skipIntroEnabled',
   RECAP: 'skipRecapEnabled',
   NEXT_EPISODE: 'skipNextEpisodeEnabled',
+  NETFLIX_ENABLED: 'netflixEnabled',
 };
 
 export const DEFAULT_SKIP_SETTINGS = Object.freeze({
@@ -10,6 +11,7 @@ export const DEFAULT_SKIP_SETTINGS = Object.freeze({
   [SETTING_KEYS.INTRO]: true,
   [SETTING_KEYS.RECAP]: true,
   [SETTING_KEYS.NEXT_EPISODE]: true,
+  [SETTING_KEYS.NETFLIX_ENABLED]: true,
 });
 
 function toBoolean(value, fallback) {
@@ -28,6 +30,10 @@ export function normalizeSettings(input) {
     [SETTING_KEYS.NEXT_EPISODE]: toBoolean(
       input?.[SETTING_KEYS.NEXT_EPISODE],
       DEFAULT_SKIP_SETTINGS[SETTING_KEYS.NEXT_EPISODE],
+    ),
+    [SETTING_KEYS.NETFLIX_ENABLED]: toBoolean(
+      input?.[SETTING_KEYS.NETFLIX_ENABLED],
+      DEFAULT_SKIP_SETTINGS[SETTING_KEYS.NETFLIX_ENABLED],
     ),
   };
 }

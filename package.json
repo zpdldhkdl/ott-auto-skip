@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "vite build --watch --mode development",
     "icons": "node scripts/generate-extension-icons.mjs",
+    "screenshots": "node scripts/take_screenshots.mjs",
     "build": "npm run icons && vite build",
     "package": "npm run build && node scripts/package-extension.mjs"
   },
   "devDependencies": {
+    "express": "^5.2.1",
+    "puppeteer": "^24.37.5",
     "sharp": "^0.34.4",
     "vite": "^5.4.19"
   }

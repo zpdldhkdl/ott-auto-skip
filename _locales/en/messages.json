@@ -11,6 +11,9 @@
   "toggleMaster": {
     "message": "Enable Auto Skip"
   },
+  "toggleNetflix": {
+    "message": "Enable Netflix Auto Skip"
+  },
   "toggleIntro": {
     "message": "Skip Intro"
   },

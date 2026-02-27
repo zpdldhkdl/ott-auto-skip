@@ -3,6 +3,7 @@ const SETTING_KEYS = {
   INTRO: 'skipIntroEnabled',
   RECAP: 'skipRecapEnabled',
   NEXT_EPISODE: 'skipNextEpisodeEnabled',
+  NETFLIX_ENABLED: 'netflixEnabled',
 };
 
 const DEFAULT_SKIP_SETTINGS = Object.freeze({
@@ -10,6 +11,7 @@ const DEFAULT_SKIP_SETTINGS = Object.freeze({
   [SETTING_KEYS.INTRO]: true,
   [SETTING_KEYS.RECAP]: true,
   [SETTING_KEYS.NEXT_EPISODE]: true,
+  [SETTING_KEYS.NETFLIX_ENABLED]: true,
 });
 
 const CLICK_TARGETS = [
@@ -33,6 +35,7 @@ const PERIODIC_SCAN_MS = 400;
 
 const SETTINGS_KEYS = [
   SETTING_KEYS.MASTER,
+  SETTING_KEYS.NETFLIX_ENABLED,
   SETTING_KEYS.INTRO,
   SETTING_KEYS.RECAP,
   SETTING_KEYS.NEXT_EPISODE,
@@ -59,6 +62,10 @@ function normalizeSettings(input) {
       input?.[SETTING_KEYS.NEXT_EPISODE],
       DEFAULT_SKIP_SETTINGS[SETTING_KEYS.NEXT_EPISODE],
     ),
+    [SETTING_KEYS.NETFLIX_ENABLED]: toBoolean(
+      input?.[SETTING_KEYS.NETFLIX_ENABLED],
+      DEFAULT_SKIP_SETTINGS[SETTING_KEYS.NETFLIX_ENABLED],
+    ),
   };
 }
 
@@ -77,6 +84,11 @@ function getSettings() {
 
 function canClickFor(settingKey) {
   if (!currentSettings[SETTING_KEYS.MASTER]) {
+    return false;
+  }
+
+  // If we are operating on Netflix, both Master and Netflix toggle must be enabled
+  if (!currentSettings[SETTING_KEYS.NETFLIX_ENABLED]) {
     return false;
   }
 
