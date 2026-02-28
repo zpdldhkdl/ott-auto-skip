@@ -37,5 +37,8 @@
   },
   "contactUs": {
     "message": "联系我们"
+  },
+  "githubRepo": {
+    "message": "GitHub"
   }
 }

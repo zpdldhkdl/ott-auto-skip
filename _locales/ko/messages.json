@@ -37,5 +37,8 @@
   },
   "contactUs": {
     "message": "문의하기"
+  },
+  "githubRepo": {
+    "message": "GitHub"
   }
 }
