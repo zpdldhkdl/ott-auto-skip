@@ -28,7 +28,7 @@ Whether you're binge-watching a K-drama marathon, catching up on the latest Netf
 | Disney+ | ❌ | ❌ | ❌ |
 | Wavve | ❌ | ❌ | ❌ |
 | Tving | ❌ | ❌ | ❌ |
-| Coupang Play | ❌ | ❌ | ❌ |
+| Coupang Play | ❌ | ❌ | ✅ |
 
 > 💡 More platforms will be added over time. Feel free to open an issue or PR to request support for a specific service!
 
