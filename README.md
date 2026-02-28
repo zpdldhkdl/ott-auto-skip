@@ -34,8 +34,8 @@ Whether you're binge-watching a K-drama marathon, catching up on the latest Netf
 
 ## 📦 Installation
 
-### From Chrome Web Store *(Coming Soon)*
-1. Visit the Chrome Web Store listing.
+### From Chrome Web Store
+1. Visit the Chrome Web Store listing: [OTT Auto Skip](https://chromewebstore.google.com/detail/ott-auto-skip/kmalngohphaicdghjkmamdeaknpecedk)
 2. Click **"Add to Chrome"**.
 3. Done! The extension will start working automatically.
 
